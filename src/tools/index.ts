@@ -5,7 +5,9 @@ import type { UnsplashClient } from '../unsplash/client.js'
 import { registerCollectionTools } from './collections.js'
 import { registerMeTools } from './me.js'
 import { registerPhotoTools } from './photos.js'
+import { registerPickerTools } from './picker.js'
 import { registerSearchTools } from './search.js'
+import { registerSlideTools } from './slides.js'
 import { registerStatsTools } from './stats.js'
 import { registerTopicTools } from './topics.js'
 import { registerUserTools } from './users.js'
@@ -32,6 +34,8 @@ export interface ToolContext {
 export function registerTools(server: McpServer, ctx: ToolContext): void {
   registerPhotoTools(server, ctx)
   registerSearchTools(server, ctx)
+  registerSlideTools(server, ctx)
+  registerPickerTools(server, ctx)
   registerUserTools(server, ctx)
   registerCollectionTools(server, ctx)
   registerTopicTools(server, ctx)
